@@ -178,6 +178,12 @@ final class Psr7EventStreamTest extends Framework\TestCase
     }
 
     #[Framework\Attributes\Test]
+    public function getIdReturnsId(): void
+    {
+        self::assertSame('foo', $this->subject->getId());
+    }
+
+    #[Framework\Attributes\Test]
     public function getResponseThrowsExceptionIfStreamIsNotActive(): void
     {
         $this->expectExceptionObject(new Src\Exception\StreamIsInactive());

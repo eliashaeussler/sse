@@ -113,6 +113,14 @@ final class SelfEmittingEventStream implements EventStream
         return $this->active;
     }
 
+    /**
+     * @return non-empty-string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
     public static function canHandle(Message\ServerRequestInterface $request): bool
     {
         return $request->getHeader('Accept') === [self::CONTENT_TYPE];

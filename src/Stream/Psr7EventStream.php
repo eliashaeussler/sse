@@ -115,6 +115,14 @@ final class Psr7EventStream implements EventStream
     }
 
     /**
+     * @return non-empty-string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
      * @throws Exception\StreamIsInactive
      */
     public function getResponse(): Message\ResponseInterface

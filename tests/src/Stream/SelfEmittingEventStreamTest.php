@@ -191,6 +191,12 @@ final class SelfEmittingEventStreamTest extends Framework\TestCase
     }
 
     #[Framework\Attributes\Test]
+    public function getIdReturnsId(): void
+    {
+        self::assertSame('foo', $this->subject->getId());
+    }
+
+    #[Framework\Attributes\Test]
     public function canHandleReturnsTrueIfRequestAcceptsRequiredContentType(): void
     {
         $request = new Psr7\ServerRequest('GET', 'https://www.example.com');
