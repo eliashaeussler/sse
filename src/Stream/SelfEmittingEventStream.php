@@ -49,8 +49,7 @@ final class SelfEmittingEventStream implements EventStream
         private readonly string $id,
         private readonly int $retry,
         private readonly Emitter\Emitter $emitter,
-    ) {
-    }
+    ) {}
 
     /**
      * @param non-empty-string|null $id

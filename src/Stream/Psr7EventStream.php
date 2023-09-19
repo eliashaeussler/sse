@@ -50,8 +50,7 @@ final class Psr7EventStream implements EventStream
         private readonly string $id,
         private readonly int $retry,
         private readonly Message\ResponseFactoryInterface $responseFactory,
-    ) {
-    }
+    ) {}
 
     /**
      * @param non-empty-string|null $id

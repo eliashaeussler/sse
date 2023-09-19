@@ -40,8 +40,7 @@ final class FakeEvent implements Event
      */
     public function __construct(
         public array $data = [],
-    ) {
-    }
+    ) {}
 
     public function getName(): string
     {
