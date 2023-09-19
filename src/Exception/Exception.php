@@ -29,6 +29,4 @@ namespace EliasHaeussler\SSE\Exception;
  * @author Elias Häußler <elias@haeussler.dev>
  * @license GPL-3.0-or-later
  */
-abstract class Exception extends \Exception
-{
-}
+abstract class Exception extends \Exception {}
