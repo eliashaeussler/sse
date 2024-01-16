@@ -108,7 +108,7 @@ final class SelfEmittingEventStreamTest extends Framework\TestCase
 
         $this->expectExceptionObject(new Src\Exception\StreamIsClosed());
 
-        $this->subject->sendEvent(new Src\Tests\Fixtures\FakeEvent());
+        $this->subject->sendEvent(new Tests\Fixtures\FakeEvent());
     }
 
     #[Framework\Attributes\Test]
@@ -116,14 +116,14 @@ final class SelfEmittingEventStreamTest extends Framework\TestCase
     {
         $this->expectExceptionObject(new Src\Exception\StreamIsInactive());
 
-        $this->subject->sendEvent(new Src\Tests\Fixtures\FakeEvent());
+        $this->subject->sendEvent(new Tests\Fixtures\FakeEvent());
     }
 
     #[Framework\Attributes\Test]
     public function sendEventEmitsStreamData(): void
     {
         $this->subject->open();
-        $this->subject->sendEvent(new Src\Tests\Fixtures\FakeEvent(['foo' => 'baz']));
+        $this->subject->sendEvent(new Tests\Fixtures\FakeEvent(['foo' => 'baz']));
 
         $expected = [
             'id: foo',
