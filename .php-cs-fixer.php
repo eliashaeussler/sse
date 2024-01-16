@@ -28,6 +28,7 @@ $header = PhpCsFixerConfig\Rules\Header::create(
     'eliashaeussler/sse',
     PhpCsFixerConfig\Package\Type::ComposerPackage,
     PhpCsFixerConfig\Package\Author::create('Elias Häußler', 'elias@haeussler.dev'),
+    PhpCsFixerConfig\Package\CopyrightRange::from(2023),
     PhpCsFixerConfig\Package\License::GPL3OrLater,
 );
 
