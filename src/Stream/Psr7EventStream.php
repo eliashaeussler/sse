@@ -55,7 +55,7 @@ final class Psr7EventStream implements EventStream
     /**
      * @param non-empty-string|null $id
      */
-    public static function create(string $id = null, int $retry = 50): self
+    public static function create(?string $id = null, int $retry = 50): self
     {
         $id ??= uniqid();
         $responseFactory = Discovery\Psr17FactoryDiscovery::findResponseFactory();
@@ -88,7 +88,7 @@ final class Psr7EventStream implements EventStream
         $this->sendMessage($event->getName(), json_encode($event, JSON_THROW_ON_ERROR));
     }
 
-    public function sendMessage(string $name = 'message', bool|float|int|string $data = null): void
+    public function sendMessage(string $name = 'message', bool|float|int|string|null $data = null): void
     {
         if ($this->closed) {
             throw new Exception\StreamIsClosed();
