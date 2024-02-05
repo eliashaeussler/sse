@@ -60,7 +60,7 @@ interface EventStream
      * @throws Exception\StreamIsClosed
      * @throws Exception\StreamIsInactive
      */
-    public function sendMessage(string $name = 'message', bool|float|int|string $data = null): void;
+    public function sendMessage(string $name = 'message', bool|float|int|string|null $data = null): void;
 
     public function isActive(): bool;
 
