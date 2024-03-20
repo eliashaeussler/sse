@@ -4,7 +4,7 @@
 
 # Server-Sent Events in PHP
 
-[![Coverage](https://img.shields.io/codecov/c/github/eliashaeussler/sse?logo=codecov&token=t0a6qwwbzs)](https://codecov.io/gh/eliashaeussler/sse)
+[![Coverage](https://img.shields.io/coverallsCoverage/github/eliashaeussler/sse?logo=coveralls)](https://coveralls.io/github/eliashaeussler/sse)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/eliashaeussler/sse?logo=codeclimate)](https://codeclimate.com/github/eliashaeussler/sse/maintainability)
 [![CGL](https://img.shields.io/github/actions/workflow/status/eliashaeussler/sse/cgl.yaml?label=cgl&logo=github)](https://github.com/eliashaeussler/sse/actions/workflows/cgl.yaml)
 [![Tests](https://img.shields.io/github/actions/workflow/status/eliashaeussler/sse/tests.yaml?label=tests&logo=github)](https://github.com/eliashaeussler/sse/actions/workflows/tests.yaml)
