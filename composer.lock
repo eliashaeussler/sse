@@ -648,22 +648,22 @@
         },
         {
             "name": "eliashaeussler/rector-config",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eliashaeussler/rector-config.git",
-                "reference": "55bd32b120c9d6b2156d9870c9bb1c6c892a9a0f"
+                "reference": "9f543887723c59e7c88ce52a2a0079b397d5fae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eliashaeussler/rector-config/zipball/55bd32b120c9d6b2156d9870c9bb1c6c892a9a0f",
-                "reference": "55bd32b120c9d6b2156d9870c9bb1c6c892a9a0f",
+                "url": "https://api.github.com/repos/eliashaeussler/rector-config/zipball/9f543887723c59e7c88ce52a2a0079b397d5fae4",
+                "reference": "9f543887723c59e7c88ce52a2a0079b397d5fae4",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.0",
                 "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
-                "rector/rector": "^1.0"
+                "rector/rector": "^1.2"
             },
             "require-dev": {
                 "armin/editorconfig-cli": "^1.8 || ^2.0",
@@ -671,9 +671,9 @@
                 "eliashaeussler/php-cs-fixer-config": "^2.0",
                 "eliashaeussler/phpstan-config": "^2.0",
                 "ergebnis/composer-normalize": "^2.30",
-                "illuminate/container": "^10.39",
+                "illuminate/container": "^10.39 || ^11.0",
                 "phpstan/extension-installer": "^1.2",
-                "phpunit/phpunit": "^10.1",
+                "phpunit/phpunit": "^10.1 || ^11.0",
                 "ssch/typo3-rector": "^2.0",
                 "symfony/config": "^5.4 || ^6.0 || ^7.0",
                 "typo3/cms-core": "^12.4 || ^13.0"
@@ -702,9 +702,9 @@
             "description": "My personal configuration for Rector",
             "support": {
                 "issues": "https://github.com/eliashaeussler/rector-config/issues",
-                "source": "https://github.com/eliashaeussler/rector-config/tree/3.0.1"
+                "source": "https://github.com/eliashaeussler/rector-config/tree/3.0.2"
             },
-            "time": "2024-02-14T17:21:32+00:00"
+            "time": "2024-07-06T16:34:34+00:00"
         },
         {
             "name": "ergebnis/composer-normalize",
@@ -1864,16 +1864,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.6",
+            "version": "1.11.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "6ac78f1165346c83b4a753f7e4186d969c6ad0ee"
+                "reference": "6adbd118e6c0515dd2f36b06cde1d6da40f1b8ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6ac78f1165346c83b4a753f7e4186d969c6ad0ee",
-                "reference": "6ac78f1165346c83b4a753f7e4186d969c6ad0ee",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6adbd118e6c0515dd2f36b06cde1d6da40f1b8ec",
+                "reference": "6adbd118e6c0515dd2f36b06cde1d6da40f1b8ec",
                 "shasum": ""
             },
             "require": {
@@ -1918,7 +1918,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-01T15:33:06+00:00"
+            "time": "2024-07-24T07:01:22+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -3247,16 +3247,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "556509e2dcf527369892b7d411379c4a02f31859"
+                "reference": "b38a3eed3ce2046f40c001255e2fec9d2746bacf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/556509e2dcf527369892b7d411379c4a02f31859",
-                "reference": "556509e2dcf527369892b7d411379c4a02f31859",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/b38a3eed3ce2046f40c001255e2fec9d2746bacf",
+                "reference": "b38a3eed3ce2046f40c001255e2fec9d2746bacf",
                 "shasum": ""
             },
             "require": {
@@ -3294,7 +3294,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/1.1.0"
+                "source": "https://github.com/rectorphp/rector/tree/1.2.1"
             },
             "funding": [
                 {
@@ -3302,7 +3302,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-18T09:40:27+00:00"
+            "time": "2024-07-16T00:22:54+00:00"
         },
         {
             "name": "sebastian/cli-parser",
