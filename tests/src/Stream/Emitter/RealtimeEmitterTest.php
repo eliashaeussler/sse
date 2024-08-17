@@ -26,10 +26,8 @@ namespace EliasHaeussler\SSE\Tests\Stream\Emitter;
 use EliasHaeussler\SSE as Src;
 use PHPUnit\Framework;
 
-use function function_exists;
 use function ob_end_clean;
 use function ob_flush;
-use function ob_get_clean;
 use function ob_start;
 use function xdebug_get_headers;
 
@@ -49,12 +47,9 @@ final class RealtimeEmitterTest extends Framework\TestCase
     }
 
     #[Framework\Attributes\Test]
+    #[Framework\Attributes\RequiresFunction('xdebug_get_headers')]
     public function headerWritesHeaderLineToOutput(): void
     {
-        if (!function_exists('xdebug_get_headers')) {
-            self::markTestSkipped('Test requires xdebug to be enabled.');
-        }
-
         $this->subject->header('foo', 'baz');
 
         self::assertSame(['foo: baz'], xdebug_get_headers());
@@ -63,12 +58,9 @@ final class RealtimeEmitterTest extends Framework\TestCase
     #[Framework\Attributes\Test]
     public function bodyLineWritesLineToOutput(): void
     {
-        ob_flush();
-        ob_start();
+        $this->expectOutputString('foo');
 
         $this->subject->bodyLine('foo');
-
-        self::assertSame('foo', ob_get_clean());
     }
 
     #[Framework\Attributes\Test]
