@@ -29,7 +29,6 @@ use Http\Discovery;
 use Psr\Http\Message;
 
 use function json_encode;
-use function sprintf;
 use function uniqid;
 
 /**
@@ -140,10 +139,7 @@ final class Psr7EventStream implements EventStream
 
     private function sendStreamData(string $name, bool|float|int|string|null $value): void
     {
-        $this->addBodyLine(
-            sprintf('%s: %s', $name, $value),
-        );
-
+        $this->addBodyLine($name.': '.$value);
         $this->sendDelimiter();
     }
 

@@ -28,7 +28,6 @@ use function header;
 use function headers_sent;
 use function ob_flush;
 use function ob_get_level;
-use function sprintf;
 
 /**
  * RealtimeEmitter.
@@ -40,7 +39,7 @@ final class RealtimeEmitter implements Emitter
 {
     public function header(string $name, bool|float|int|string|null $value): void
     {
-        header(sprintf('%s: %s', $name, $value));
+        header($name.': '.$value);
     }
 
     /**

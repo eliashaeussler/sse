@@ -28,7 +28,6 @@ use EliasHaeussler\SSE\Exception;
 use Psr\Http\Message;
 
 use function json_encode;
-use function sprintf;
 use function uniqid;
 
 /**
@@ -127,10 +126,7 @@ final class SelfEmittingEventStream implements EventStream
 
     private function sendStreamData(string $name, bool|float|int|string|null $value): void
     {
-        $this->emitter->bodyLine(
-            sprintf('%s: %s', $name, $value),
-        );
-
+        $this->emitter->bodyLine($name.': '.$value);
         $this->sendDelimiter();
     }
 
