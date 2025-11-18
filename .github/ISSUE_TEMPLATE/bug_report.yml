@@ -11,7 +11,7 @@ body:
     attributes:
       label: PHP version
       description: What PHP version are you using?
-      placeholder: 'e.g. 8.1.18'
+      placeholder: 'e.g. 8.2.29'
     validations:
       required: true
   - type: input
