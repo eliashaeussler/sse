@@ -541,16 +541,16 @@
         },
         {
             "name": "eliashaeussler/php-cs-fixer-config",
-            "version": "3.0.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eliashaeussler/php-cs-fixer-config.git",
-                "reference": "6097a49247a8761b8fa525622116cb4336f7be91"
+                "reference": "320fcdb823a626da59d20e6591006296e97b8bf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eliashaeussler/php-cs-fixer-config/zipball/6097a49247a8761b8fa525622116cb4336f7be91",
-                "reference": "6097a49247a8761b8fa525622116cb4336f7be91",
+                "url": "https://api.github.com/repos/eliashaeussler/php-cs-fixer-config/zipball/320fcdb823a626da59d20e6591006296e97b8bf2",
+                "reference": "320fcdb823a626da59d20e6591006296e97b8bf2",
                 "shasum": ""
             },
             "require": {
@@ -560,12 +560,17 @@
             },
             "require-dev": {
                 "armin/editorconfig-cli": "^2.0",
-                "eliashaeussler/phpstan-config": "^3.0",
+                "eliashaeussler/phpstan-config": "^4.0",
                 "eliashaeussler/phpunit-attributes": "^2.0",
                 "eliashaeussler/rector-config": "^4.0",
                 "ergebnis/composer-normalize": "^2.29",
                 "phpstan/extension-installer": "^1.2",
-                "phpunit/phpunit": "^11.0 || ^12.0"
+                "phpunit/phpunit": "^11.0 || ^12.0",
+                "shipmonk/composer-dependency-analyser": "^1.8",
+                "typo3/coding-standards": "^0.6.0 || ^0.7.0 || ^0.8.0"
+            },
+            "suggest": {
+                "typo3/coding-standards": "Shipped PHP-CS-Fixer rules for TYPO3 projects and extensions can be included automatically"
             },
             "type": "library",
             "autoload": {
@@ -588,9 +593,9 @@
             "description": "My personal configuration for PHP-CS-Fixer",
             "support": {
                 "issues": "https://github.com/eliashaeussler/php-cs-fixer-config/issues",
-                "source": "https://github.com/eliashaeussler/php-cs-fixer-config/tree/3.0.1"
+                "source": "https://github.com/eliashaeussler/php-cs-fixer-config/tree/3.1.0"
             },
-            "time": "2025-12-09T08:46:14+00:00"
+            "time": "2025-12-19T17:38:06+00:00"
         },
         {
             "name": "eliashaeussler/phpstan-config",
