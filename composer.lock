@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b70f65159426e79314161c5b4f3571ca",
+    "content-hash": "acfc5c2ed3eac29784bf64632b89b1ee",
     "packages": [
         {
             "name": "php-http/discovery",
