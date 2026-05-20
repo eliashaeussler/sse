@@ -10,20 +10,20 @@ on:
 jobs:
   prepare:
     name: Prepare workflow
-    uses: eliashaeussler/.github/.github/workflows/pull-request.yaml@main
+    uses: eliashaeussler/.github/.github/workflows/pull-request.yaml@76514ec3b1ca3ae6de8d56490ddcfe7f05139590 # main
 
   cgl:
     runs-on: ubuntu-latest
     needs: prepare
     if: needs.prepare.outputs.continue == 'true'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           fetch-depth: 0
 
       # Prepare environment
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@7c071dfe9dc99bdf297fa79cb49ea005b9fcadbc # v2
         with:
           # We use the minimum supported PHP version
           php-version: 8.2 # renovate-ignore
@@ -37,7 +37,7 @@ jobs:
 
       # Install dependencies
       - name: Install Composer dependencies
-        uses: ramsey/composer-install@v4
+        uses: ramsey/composer-install@5c2bcf28d7b060ef3c601d7b476d5430a7b46c27 # v4
 
       # Check Composer dependencies
       - name: Check dependencies
