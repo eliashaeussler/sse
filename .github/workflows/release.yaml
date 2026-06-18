@@ -1,28 +1,14 @@
 name: Release
+
 on:
   push:
     tags:
       - '*'
 
+permissions:
+  contents: write
+
 jobs:
-  # Job: Create release
   release:
-    name: Create release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
-        with:
-          fetch-depth: 0
-
-      # Check if tag is valid
-      - name: Check tag
-        run: |
-          if ! [[ ${{ github.ref }} =~ ^refs/tags/[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$ ]]; then
-            exit 1
-          fi
-
-      # Create release
-      - name: Create release
-        uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1
-        with:
-          generateReleaseNotes: true
+    name: 'Create release'
+    uses: eliashaeussler/gha/.github/workflows/github-release.yaml@e030eb819bbfa1ca7ac404b465ee8129ec9b2ce9 # 0.7.2

@@ -21,14 +21,11 @@ declare(strict_types=1);
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-use EliasHaeussler\PHPStanConfig;
+use ShipMonk\ComposerDependencyAnalyser;
 
-return PHPStanConfig\Config\Config::create(__DIR__)
-    ->in(
-        'src',
-        'tests',
-    )
-    ->withBleedingEdge()
-    ->maxLevel()
-    ->toArray()
-;
+$config = new ComposerDependencyAnalyser\Config\Configuration();
+$config->ignoreUnknownFunctions([
+    'xdebug_get_headers',
+]);
+
+return $config;

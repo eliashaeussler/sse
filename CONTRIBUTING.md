@@ -1,8 +1,9 @@
-# Contributing
+# Contribution guide
 
-Thanks for considering contributing to this project! Each contribution is
-highly appreciated. In order to maintain a high code quality, please follow
-all steps below.
+Thanks for considering contributing to this project. Contributions of any size are highly appreciated.
+
+To keep the code base consistent and maintainable, please follow the workflow described below before
+submitting a pull request.
 
 ## Requirements
 
@@ -19,63 +20,88 @@ cd sse
 composer install
 ```
 
-## Run linters
+## Development workflow
+
+A typical contribution workflow looks like this:
+
+1. Apply automatic fixes.
+2. Run all checks.
+3. Run the test suite.
+4. Submit a pull request.
+
+### Apply automatic fixes
+
+Use the following commands to normalize and format the code base:
 
 ```bash
-# All linters
-composer lint
-
-# Specific linters
-composer lint:composer
-composer lint:editorconfig
-composer lint:php
-
-# Fix all CGL issues
+# Apply all automatic fixes
 composer fix
 
-# Fix specific CGL issues
+# Apply specific fixes
 composer fix:composer
 composer fix:editorconfig
 composer fix:php
 ```
 
-## Run static code analysis
+### Run checks
+
+Use `composer check` to run the full code quality pipeline locally. This command bundles dependency analysis,
+static analysis, coding style checks, and Rector in dry-run mode so that potential refactorings can be reviewed
+without changing files.
 
 ```bash
-# All static code analyzers
-composer sca
+# Run all checks
+composer check
 
-# Specific static code analyzers
-composer sca:php
+# Run specific checks
+composer check:deps
+composer check:refactor
+composer check:static
+composer check:style
+
+# Run specific style checks
+composer check:style:composer
+composer check:style:editorconfig
+composer check:style:php
 ```
 
-## Run tests
+### Run refactorings
+
+Refactorings are intentionally separated from regular checks because they may change the code base.
 
 ```bash
-# All tests
+# Run all configured refactorings
+composer refactor
+
+# Run specific refactorings
+composer refactor:php
+```
+
+### Run tests
+
+Run the full test suite before opening a pull request:
+
+```bash
+# Run tests
 composer test
 
-# All tests with code coverage
+# Run tests with code coverage
 composer test:coverage
 ```
 
-### Test reports
+## Coverage reports
 
-Code coverage reports are written to `.build/coverage`. You can open the
-last HTML report like follows:
+Code coverage reports are written to `build/tests/coverage`. Open the latest HTML report with:
 
 ```bash
-open .build/coverage/html/index.html
+open build/tests/coverage/html/index.html
 ```
 
-## Submit a pull request
+## Pull requests
 
-Once you have finished your work, please **submit a pull request** and describe
-what you've done. Ideally, your PR references an issue describing the problem
-you're trying to solve.
+Once the changes are ready, please [submit a pull request](https://github.com/eliashaeussler/sse/compare)
+and describe what was changed and why. Ideally, the pull request references an issue that describes the
+problem being solved.
 
-All described code quality tools are automatically executed on each pull request
-for all currently supported PHP versions. Take a look at the appropriate
-[workflows][1] to get a detailed overview.
-
-[1]: .github/workflows
+All documented code quality tools are executed automatically for pull requests across the currently
+supported PHP versions. For details, refer to the [GitHub Actions workflows](.github/workflows).
