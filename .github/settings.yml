@@ -11,7 +11,9 @@ repository:
   allow_squash_merge: true
   allow_merge_commit: true
   allow_rebase_merge: true
+  allow_auto_merge: true
   delete_branch_on_merge: true
+  allow_update_branch: true
   # This will be handled by Renovate
   enable_automated_security_fixes: false
   enable_vulnerability_alerts: false
@@ -88,33 +90,27 @@ rulesets:
           strict_required_status_checks_policy: true
           do_not_enforce_on_create: false
           required_status_checks:
-            - context: 'cgl'
+            - context: 'Checks / Perform Composer checks'
               integration_id: 15368
-            - context: 'Tests (PHP 8.2 & locked dependencies)'
+            - context: 'Checks / Perform repository checks'
               integration_id: 15368
-            - context: 'Tests (PHP 8.2 & highest dependencies)'
+            - context: 'Tests (PHP 8.2 & highest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.2 & lowest dependencies)'
+            - context: 'Tests (PHP 8.2 & lowest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.3 & locked dependencies)'
+            - context: 'Tests (PHP 8.3 & highest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.3 & highest dependencies)'
+            - context: 'Tests (PHP 8.3 & lowest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.3 & lowest dependencies)'
+            - context: 'Tests (PHP 8.4 & highest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.4 & locked dependencies)'
+            - context: 'Tests (PHP 8.4 & lowest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.4 & highest dependencies)'
+            - context: 'Tests (PHP 8.5 & highest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.4 & lowest dependencies)'
+            - context: 'Tests (PHP 8.5 & lowest dependencies) / Run tests'
               integration_id: 15368
-            - context: 'Tests (PHP 8.5 & locked dependencies)'
-              integration_id: 15368
-            - context: 'Tests (PHP 8.5 & highest dependencies)'
-              integration_id: 15368
-            - context: 'Tests (PHP 8.5 & lowest dependencies)'
-              integration_id: 15368
-            - context: 'Test coverage'
+            - context: 'Test coverage / Collect test coverage'
               integration_id: 15368
     bypass_actors:
       - actor_id: 5

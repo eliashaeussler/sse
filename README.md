@@ -5,8 +5,7 @@
 # Server-Sent Events in PHP
 
 [![Coverage](https://img.shields.io/coverallsCoverage/github/eliashaeussler/sse?logo=coveralls)](https://coveralls.io/github/eliashaeussler/sse)
-[![CGL](https://img.shields.io/github/actions/workflow/status/eliashaeussler/sse/cgl.yaml?label=cgl&logo=github)](https://github.com/eliashaeussler/sse/actions/workflows/cgl.yaml)
-[![Tests](https://img.shields.io/github/actions/workflow/status/eliashaeussler/sse/tests.yaml?label=tests&logo=github)](https://github.com/eliashaeussler/sse/actions/workflows/tests.yaml)
+[![CI](https://img.shields.io/github/actions/workflow/status/eliashaeussler/sse/ci.yaml?label=CI&logo=github)](https://github.com/eliashaeussler/sse/actions/workflows/ci.yaml)
 [![Supported PHP Versions](https://img.shields.io/packagist/dependency-v/eliashaeussler/sse/php?logo=php)](https://packagist.org/packages/eliashaeussler/sse)
 
 </div>

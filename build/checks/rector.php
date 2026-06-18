@@ -27,14 +27,16 @@ use Rector\Php80\Rector\Class_\AnnotationToAttributeRector;
 use Rector\ValueObject\PhpVersion;
 
 return static function (RectorConfig $rectorConfig): void {
+    $rootPath = dirname(__DIR__, 2);
+
     Config::create($rectorConfig, PhpVersion::PHP_82)
         ->in(
-            __DIR__.'/src',
-            __DIR__.'/tests',
+            $rootPath.'/src',
+            $rootPath.'/tests',
         )
         ->withPHPUnit()
         ->skip(AnnotationToAttributeRector::class, [
-            __DIR__.'/src/Stream/Emitter/RealtimeEmitter.php',
+            $rootPath.'/src/Stream/Emitter/RealtimeEmitter.php',
         ])
         ->apply()
     ;
