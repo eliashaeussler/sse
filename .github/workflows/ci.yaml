@@ -14,7 +14,7 @@ permissions:
 jobs:
   prepare:
     name: 'Prepare workflow'
-    uses: eliashaeussler/gha/.github/workflows/preparation.yaml@5ae7ef927b5033561bb6925328172fc7a711bcab # 1.1.24
+    uses: eliashaeussler/gha/.github/workflows/preparation.yaml@490b4041e52cc4475009a18ce9b038a8108278da # 1.1.25
 
   checks:
     name: 'Checks'
@@ -26,7 +26,7 @@ jobs:
       contents: read
       security-events: write
 
-    uses: eliashaeussler/gha/.github/workflows/checks.yaml@5ae7ef927b5033561bb6925328172fc7a711bcab # 1.1.24
+    uses: eliashaeussler/gha/.github/workflows/checks.yaml@490b4041e52cc4475009a18ce9b038a8108278da # 1.1.25
     with:
       # We use the minimum supported PHP version
       php-version: 8.2 # renovate-ignore
@@ -43,7 +43,7 @@ jobs:
         php-version: ["8.2", "8.3", "8.4", "8.5"]
         dependencies: ["highest", "lowest"]
 
-    uses: eliashaeussler/gha/.github/workflows/composer-tests.yaml@5ae7ef927b5033561bb6925328172fc7a711bcab # 1.1.24
+    uses: eliashaeussler/gha/.github/workflows/composer-tests.yaml@490b4041e52cc4475009a18ce9b038a8108278da # 1.1.25
     with:
       php-version: ${{ matrix.php-version }}
       dependencies: ${{ matrix.dependencies }}
@@ -54,7 +54,7 @@ jobs:
     needs: [prepare]
     if: ${{ needs.prepare.outputs.continue == 'true' }}
 
-    uses: eliashaeussler/gha/.github/workflows/composer-test-coverage.yaml@5ae7ef927b5033561bb6925328172fc7a711bcab # 1.1.24
+    uses: eliashaeussler/gha/.github/workflows/composer-test-coverage.yaml@490b4041e52cc4475009a18ce9b038a8108278da # 1.1.25
     with:
       # Usage of xdebug is intended, tests make use of xdebug functions
       coverage-driver: xdebug
