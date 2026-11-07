@@ -11,4 +11,4 @@ permissions:
 jobs:
   release:
     name: 'Create release'
-    uses: eliashaeussler/gha/.github/workflows/github-release.yaml@d0c78d2dd7f2d10ec208b4de6a1bab02cd89ab43 # 1.1.26
+    uses: eliashaeussler/gha/.github/workflows/github-release.yaml@4106f672f9e90f06b7a43e457a9cbf4d43a24f07 # 1.1.29
